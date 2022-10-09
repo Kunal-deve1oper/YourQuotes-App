@@ -22,7 +22,7 @@ const Header = ({ handleToggleDarkMode, setSearch }) => {
     <div className="header">
       <div className="header-top">
         <div className="header-left">
-          <Link to="/"><h1>YourQuotes</h1></Link>
+          <h1>YourQuotes</h1>
         </div>
         <div className="header-right">
           <Search handleSearchNote={setSearch} className="sm-hide" />

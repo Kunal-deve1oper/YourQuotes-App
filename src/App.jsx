@@ -125,7 +125,7 @@ function App() {
         className={`${darkMode && "dark-mode"}`}
         onClick={checkIfClickedInside}
       >
-        <BrowserRouter>
+
           <Header
             handleToggleDarkMode={setDarkMode}
             setSearch={setSearchText}
@@ -150,6 +150,7 @@ function App() {
           ) : (
             <div className={`container ${addNotePopupIsOpen && "add-overlay"}`}>
               <div className="wrapper"></div>
+              <BrowserRouter>
               <Routes>
                 <Route
                   exact path="/"
@@ -170,6 +171,7 @@ function App() {
                 <Route exact path="quotes/:id" element={<ViewQuotes handleDeleteNote={deleteNote}/>}/> 
                 <Route exact path="*" element={<PageNotFound/>}/>
               </Routes>
+              </BrowserRouter>
               <ToastContainer
                 position="top-center"
                 autoClose={2000}
@@ -208,7 +210,7 @@ function App() {
               setAddNotePopupIsOpen={setAddNotePopupIsOpen}
             />
           )}
-        </BrowserRouter>
+        
       </div>
     </>
   );
