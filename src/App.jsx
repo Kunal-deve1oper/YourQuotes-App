@@ -167,6 +167,7 @@ function App() {
                   }
                 />
                 <Route exact path="/:id" element={<ViewQuotes handleDeleteNote={deleteNote}/>}/> 
+                <Route exact path="*" element={<div>page not found</div>}/>
               </Routes>
               <ToastContainer
                 position="top-center"
