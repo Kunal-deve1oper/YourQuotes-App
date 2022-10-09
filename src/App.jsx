@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ViewQuotes from "./components/ViewQuotes";
+import PageNotFound from "./components/PageNotFound";
 
 //API Details
 // 20220912223415
@@ -166,8 +167,8 @@ function App() {
                     />
                   }
                 />
-                <Route exact path="/:id" element={<ViewQuotes handleDeleteNote={deleteNote}/>}/> 
-                <Route exact path="*" element={<div>page not found</div>}/>
+                <Route exact path="quotes/:id" element={<ViewQuotes handleDeleteNote={deleteNote}/>}/> 
+                <Route exact path="*" element={<PageNotFound/>}/>
               </Routes>
               <ToastContainer
                 position="top-center"

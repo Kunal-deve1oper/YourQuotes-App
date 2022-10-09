@@ -13,7 +13,7 @@ function ViewQuotes(props) {
 
   const [newData,setNewData] = useState({});
   
-  const getParticularData = async () => {
+  const getParticularData =  () => {
      axios
       .get(`https://6315b6ef33e540a6d38296a9.mockapi.io/notepad-app/${id}`)
       .then((res) => {
