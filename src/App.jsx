@@ -168,7 +168,7 @@ function App() {
                     />
                   }
                 />
-                <Route exact path="quotes/:id" element={<ViewQuotes handleDeleteNote={deleteNote}/>}/> 
+                <Route exact path="quotes/:userId" element={<ViewQuotes handleDeleteNote={deleteNote}/>}/> 
                 <Route exact path="*" element={<PageNotFound/>}/>
               </Routes>
               </BrowserRouter>

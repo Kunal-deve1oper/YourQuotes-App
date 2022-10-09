@@ -9,13 +9,13 @@ import { useEffect } from "react";
 
 function ViewQuotes(props) {
 
-  const { id } = useParams();
+  const { userId } = useParams();
 
   const [newData,setNewData] = useState({});
   
   const getParticularData =  () => {
      axios
-      .get(`https://6315b6ef33e540a6d38296a9.mockapi.io/notepad-app/${id}`)
+      .get(`https://6315b6ef33e540a6d38296a9.mockapi.io/notepad-app/${userId}`)
       .then((res) => {
         setNewData(res.data);
       });
